@@ -1,4 +1,4 @@
-package com.phuong.e3homework.restAssured44;
+package com.phuong.homework.restAssured44;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
