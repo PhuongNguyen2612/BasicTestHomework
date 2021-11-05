@@ -1,32 +1,31 @@
 package com.phuong.homework.selenium4;
 
-import com.phuong.homework.core.DriverWrapper;
+import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.google.pages.GoogleHomeSearchPage;
-import com.phuong.homework.google.pages.GooglePageFooter;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Selenium4Test extends SeleniumBaseTest {
 
-    @BeforeTest
-    public void preCondition(){
+    @BeforeMethod
+    public void preCondition() {
         DriverWrapper.getDriver().navigate().to("https://google.com");
     }
 
     @AfterTest
-    public void postCondition(){
+    public void postCondition() {
         DriverWrapper.getDriver().quit();
     }
 
     @Test
-    public void testingChromeAndSeleniumBasic(){
+    public void testingChromeAndSeleniumBasic() {
         Assert.assertEquals(true, true);
     }
 
     @Test
-    public void testBasingSearchOnGoogleMainPage(){
+    public void testBasingSearchOnGoogleMainPage() {
         String title = new GoogleHomeSearchPage()
                 .setTextToSearchField("Vietnam")
                 .clickGoogleSearchButton()
@@ -35,7 +34,7 @@ public class Selenium4Test extends SeleniumBaseTest {
     }
 
     @Test
-    public void testDoodlesButton(){
+    public void testDoodlesButton() {
         String title = new GoogleHomeSearchPage()
                 .clickDoodlesButton()
                 .getTitle();
@@ -43,7 +42,7 @@ public class Selenium4Test extends SeleniumBaseTest {
     }
 
     @Test
-    public void testSearchOnDoodlesPage(){
+    public void testSearchOnDoodlesPage() {
         String url = new GoogleHomeSearchPage()
                 .clickDoodlesButton()
                 .setTextToSearchField("bee")
@@ -61,9 +60,16 @@ public class Selenium4Test extends SeleniumBaseTest {
     }
 
     @Test
-    public void testAboutButton(){
-        String url = new GooglePageFooter().clickAboutButton().getUrl();
-        Assert.assertTrue(url.contains("about"));
+    public void testAboutButton() {
+        String url = new GoogleHomeSearchPage().clickAboutButton().getUrl();
+        Assert.assertTrue(url.contains("about.google"));
     }
+
+    @Test
+    public void testAdvertisingButton() {
+        String url = new GoogleHomeSearchPage().clickAdvertisingButton().getUrl();
+        Assert.assertTrue(url.contains("ads.google"));
+    }
+
 
 }
