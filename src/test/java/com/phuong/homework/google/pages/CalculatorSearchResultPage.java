@@ -3,6 +3,10 @@ package com.phuong.homework.google.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * This is the page which result after search "Calculator" in google home search page
+ */
+
 public class CalculatorSearchResultPage extends GoogleSearchResultPage{
 
     @FindBy(xpath = "//div[text()='1']") private WebElement number1;
@@ -27,8 +31,21 @@ public class CalculatorSearchResultPage extends GoogleSearchResultPage{
 
     @FindBy(xpath = "//div[text()='÷']") private WebElement divisionButton;
 
+    @FindBy(xpath = "//div[text()='×']") private WebElement multiplyButton;
+
+    @FindBy(xpath = "//div[text()='-']") private WebElement minusButton;
+
+    @FindBy(xpath = "//div[text()='+']") private WebElement plusButton;
+
     @FindBy(id = "cwos") private WebElement calculatorScreen;
 
+    /**
+     * Method choose the number of calculator to click
+     * if input is not a number @return not click to anything
+     *
+     * @param number - number you want to click
+     * @return CalculatorSearchResultPage
+     */
     public CalculatorSearchResultPage clickNumber(int number){
         switch (number){
             case 1:
@@ -64,11 +81,38 @@ public class CalculatorSearchResultPage extends GoogleSearchResultPage{
         return this;
     }
 
-    public CalculatorSearchResultPage clickDivisionButton(){
-        divisionButton.click();
+    /**
+     * Method choose button of calculator to click
+     * if %operator% is not true @return not click to anything
+     *
+     * @param operator- button you want to click
+     * @return CalculatorSearchResultPage
+     */
+    public CalculatorSearchResultPage clickOperator(char operator){
+        switch (operator) {
+            case '/':
+                divisionButton.click();
+                break;
+            case 'x':
+                multiplyButton.click();
+                break;
+            case '-':
+                minusButton.click();
+                break;
+            case '+':
+                plusButton.click();
+                break;
+            default:
+                break;
+        }
         return this;
     }
 
+    /**
+     * Method to get result of the calculator
+     *
+     * @return String - text of result field
+     */
     public String getTextFromCalculatorScreen(){
         return calculatorScreen.getText();
     }

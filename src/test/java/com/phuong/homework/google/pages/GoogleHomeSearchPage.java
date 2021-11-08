@@ -1,93 +1,71 @@
 package com.phuong.homework.google.pages;
 
-import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.google.BaseGooglePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+/**
+ * This is a google search home page class presentation
+ */
 
 public class GoogleHomeSearchPage extends BaseGooglePage {
 
     @FindBy(xpath = "//input[@class = 'gLFyf gsfi']")
     private WebElement googleSearchField;
 
-    @FindBy(xpath = "//div[@class = 'FPdoLc lJ9FBc']/center/input[1]")
+    @FindBy(xpath = "//div[@class='FPdoLc lJ9FBc']/descendant::input[@name='btnK']")
     private WebElement googleSearchButton;
 
-    @FindBy(xpath = "//div[@class = 'FPdoLc lJ9FBc']/center/input[2]")
+    @FindBy(xpath = "//div[@class='FPdoLc lJ9FBc']/descendant::input[@name='btnI']")
     private WebElement doodlesButton;
 
-    @FindBy(xpath = "//*[@id=\"gb\"]/div/div[1]/div/div[2]/a")
+    @FindBy(xpath = "//div[@class='gb_g gb_h']/a")
     private WebElement imagesButton;
 
-    //
-    @FindBy(xpath = "//div[@class = 'KxwPGc AghGtd']/a[1]")
-    private WebElement aboutButton;
-
-    @FindBy(xpath = "//div[@class = 'KxwPGc AghGtd']/a[2]")
-    private WebElement advertisingButton;
-
-    @FindBy(xpath = "//div[@class = 'KxwPGc AghGtd']/a[3]")
-    private WebElement businessButton;
-
-    @FindBy(xpath = "//div[@class = 'KxwPGc AghGtd']/a[4]")
-    private WebElement howSearchButton;
-
-    @FindBy(xpath = "//div[@class = 'KxwPGc iTjxkf']/a[1]")
-    private WebElement privacyButton;
-
-    @FindBy(xpath = "//div[@class = 'KxwPGc iTjxkf']/a[2]")
-    private WebElement termsButton;
-
-    @FindBy(id = "Mses6b")
-    private WebElement settingButton;
-
-    @FindBy(id = "dEjpnf")
-    private WebElement settingPopupFrame;
-
+    /**
+     * method send %text% to the google search field
+     *
+     * @param text - string variable presenting the we will input into the search field
+     * @return GoogleHomeSearchPage .this
+     */
     public GoogleHomeSearchPage setTextToSearchField(String text){
-        MyLogger.LOGGER.info("Add '" +text+"' to search field");
         googleSearchField.sendKeys(text);
+        MyLogger.LOGGER.info("Add '" +text+"' to search field");
         return this;
     }
 
+    /**
+     * method click on google search button
+     *
+     * @return GoogleSearchResultPage
+     */
     public GoogleSearchResultPage clickGoogleSearchButton(){
-        MyLogger.LOGGER.info("Click search button");
         googleSearchButton.submit();
+        MyLogger.LOGGER.info("Click search button");
         return new GoogleSearchResultPage();
     }
 
+    /**
+     * method click on 'I'm feeling lucky' button
+     *
+     * @return DoodlesGooglePage
+     */
     public DoodlesGooglePage clickDoodlesButton(){
-        MyLogger.LOGGER.info("Click 'I'm feeling lucky' button");
         doodlesButton.click();
+        MyLogger.LOGGER.info("Click 'I'm feeling lucky' button");
         return new DoodlesGooglePage();
     }
 
+    /**
+     * method click on Images button
+     *
+     * @return GoogleImagesPage*/
     public GoogleImagesPage clickImagesButton(){
-        MyLogger.LOGGER.info("Click 'Images' button");
         imagesButton.click();
+        MyLogger.LOGGER.info("Click 'Images' button");
         return new GoogleImagesPage();
     }
 
-    public AboutGooglePage clickAboutButton(){
-        MyLogger.LOGGER.info("Click 'About' button");
-        aboutButton.click();
-        return new AboutGooglePage();
-    }
 
-    public AdvertisingGooglePage clickAdvertisingButton(){
-        MyLogger.LOGGER.info("Click 'Advertising' button");
-        advertisingButton.click();
-        return new AdvertisingGooglePage();
-    }
-
-    public GoogleHomeSearchPage clickSettingsButton(){
-        MyLogger.LOGGER.info("Click 'Settings' button");
-        advertisingButton.click();
-        return this;
-    }
-
-    public boolean displaySettingsPopupFrame(){
-        return settingPopupFrame.isDisplayed();
-    }
 }

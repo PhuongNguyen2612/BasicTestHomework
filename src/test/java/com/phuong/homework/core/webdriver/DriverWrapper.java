@@ -1,6 +1,5 @@
 package com.phuong.homework.core.webdriver;
 
-import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.core.webdriver.manager.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;

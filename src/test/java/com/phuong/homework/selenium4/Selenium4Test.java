@@ -1,6 +1,7 @@
 package com.phuong.homework.selenium4;
 
 import com.phuong.homework.core.webdriver.DriverWrapper;
+import com.phuong.homework.google.pages.GoogleFooter;
 import com.phuong.homework.google.pages.GoogleHomeSearchPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -25,7 +26,7 @@ public class Selenium4Test extends SeleniumBaseTest {
     }
 
     @Test
-    public void testBasingSearchOnGoogleMainPage() {
+    public void testBasicSearchOnGoogleMainPage() {
         String title = new GoogleHomeSearchPage()
                 .setTextToSearchField("Vietnam")
                 .clickGoogleSearchButton()
@@ -61,15 +62,22 @@ public class Selenium4Test extends SeleniumBaseTest {
 
     @Test
     public void testAboutButton() {
-        String url = new GoogleHomeSearchPage().clickAboutButton().getUrl();
+        String url = new GoogleFooter().clickAboutButton().getUrl();
         Assert.assertTrue(url.contains("about.google"));
     }
 
     @Test
     public void testAdvertisingButton() {
-        String url = new GoogleHomeSearchPage().clickAdvertisingButton().getUrl();
+        String url = new GoogleFooter().clickAdvertisingButton().getUrl();
         Assert.assertTrue(url.contains("ads.google"));
     }
+
+    @Test
+    public void testClickSettingButton(){
+        Assert.assertTrue(new GoogleFooter().clickSettingsButton().displaySettingsPopupFrame());
+
+    }
+
 
 
 }

@@ -1,6 +1,5 @@
 package com.phuong.homework.google;
 
-import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import org.openqa.selenium.support.PageFactory;
