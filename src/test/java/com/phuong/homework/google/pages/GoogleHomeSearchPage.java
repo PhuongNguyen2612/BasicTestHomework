@@ -20,7 +20,10 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
     @FindBy(xpath = "//div[@class='FPdoLc lJ9FBc']/descendant::input[@name='btnI']")
     private WebElement doodlesButton;
 
-    @FindBy(xpath = "//div[@class='gb_g gb_h']/a")
+    @FindBy(xpath = "//div[@class='gb_g gb_h']/a[contains(@href,'mail')]")
+    private WebElement gmailButton;
+
+    @FindBy(xpath = "//div[@class='gb_g gb_h']/a[contains(@href,'img')]")
     private WebElement imagesButton;
 
     /**

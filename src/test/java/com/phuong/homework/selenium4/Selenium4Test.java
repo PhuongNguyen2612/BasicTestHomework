@@ -57,7 +57,6 @@ public class Selenium4Test extends SeleniumBaseTest {
         String title = new GoogleHomeSearchPage()
                 .clickImagesButton().getUrl();
         Assert.assertTrue(title.contains("img"));
-
     }
 
     @Test
