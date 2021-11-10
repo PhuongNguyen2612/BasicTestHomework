@@ -29,7 +29,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
     /**
      * method send %text% to the google search field
      *
-     * @param text - string variable presenting the we will input into the search field
+     * @param text - string variable presenting what we will input into the search field
      * @return GoogleHomeSearchPage .this
      */
     public GoogleHomeSearchPage setTextToSearchField(String text){

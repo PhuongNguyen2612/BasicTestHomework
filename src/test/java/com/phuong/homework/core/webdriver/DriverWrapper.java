@@ -4,6 +4,9 @@ import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.core.webdriver.manager.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * This class provide driver instance to get driver
+ */
 public class DriverWrapper {
     private static WebDriver driver = null;
 

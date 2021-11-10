@@ -68,7 +68,13 @@ public class GoogleFooter extends BaseGooglePage {
         return this;
     }
 
+    /**
+     * Method check SettingPopupFrame is displayed or not
+     *
+     * @return boolean
+     */
     public boolean displaySettingsPopupFrame(){
+        MyLogger.LOGGER.info("Settings Pop-up frame is displayed");
         return settingPopupFrame.isDisplayed();
     }
 }

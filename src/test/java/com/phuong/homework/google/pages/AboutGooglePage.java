@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * This is About Google Page which will give you information about google
+ * This is About Google Page class presentation
  */
 
 public class AboutGooglePage extends BaseGooglePage {
