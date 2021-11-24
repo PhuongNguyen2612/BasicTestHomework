@@ -34,6 +34,6 @@ ext.testFile = System.getProperty('Test_Suite')
 
 test {
     useTestNG {
-        suites "src/test/resources/testSuites/$testFile"
+        suites "src/test/resources/testSuite/$testFile"
     }
 }
