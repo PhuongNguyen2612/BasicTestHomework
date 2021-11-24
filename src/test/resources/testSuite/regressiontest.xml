@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Tests" >
+    <test name="SearchTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.selenium4.HomePageSmokeTest" />
+        </classes>
+    </test>
+    <test name="SearchTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.selenium4.AboutPageTest" />
+        </classes>
+    </test>
+    <test name="SearchTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.selenium4.DoodlesPageTest" />
+        </classes>
+    </test>
+</suite>

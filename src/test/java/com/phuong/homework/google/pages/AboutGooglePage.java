@@ -10,17 +10,29 @@ import org.openqa.selenium.support.FindBy;
 
 public class AboutGooglePage extends BaseGooglePage {
 
-    @FindBy(className = "header-link-home")
+    @FindBy(className = "nav-toggle-button")
+    private WebElement navButton;
+
+    @FindBy(xpath = "//li[@id='tab-1']/a")
     private WebElement introduceButton;
 
-    @FindBy(className = "header-link-products")
+    @FindBy(xpath = "//li[@id='tab-2']/a")
     private WebElement productButton;
 
-    @FindBy(className = "header-link-commitments")
+    @FindBy(className = "//li[@id='tab-3']/a")
     private WebElement commitButton;
 
-    @FindBy(className = "header-link-stories")
+    @FindBy(className = "//li[@id='tab-4']/a")
     private WebElement storyButton;
+
+    /**
+     * Method to click open navigate bar
+     *
+     * @return AboutGooglePage .this*/
+    public AboutGooglePage clickNavigateButton(){
+        navButton.click();
+        return this;
+    }
 
     /**
      * Method to click on Introduce button

@@ -1,16 +1,5 @@
-//buildscript {
-//    repositories {
-//        jcenter()
-//    }
-//
-//    dependencies {
-//        classpath "io.qameta.allure:allure-gradle:2.3"
-//    }
-//}
-
 plugins {
     id 'java'
-//    id 'io.qameta.allure'
 }
 
 group 'com.phuong.test'
@@ -40,8 +29,11 @@ sourceSets {
         }
     }
 }
-//
-//allure {
-//    version = '2.2.1'
-//    autoconfigure = true
-//}
+
+ext.testFile = System.getProperty('Test_Suite')
+
+test {
+    useTestNG {
+        suites "src/test/resources/testSuites/$testFile"
+    }
+}
