@@ -1,29 +1,18 @@
 package com.phuong.homework.selenium4;
 
-import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.google.pages.GoogleFooter;
 import com.phuong.homework.google.pages.GoogleHomeSearchPage;
+import com.phuong.homework.testListener.TestListener;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({ TestListener.class })
+@Epic("Regression Tests")
+@Feature("Search Stays Tests")
 public class Selenium4Test extends SeleniumBaseTest {
-
-    @BeforeMethod
-    public void preCondition() {
-        DriverWrapper.getDriver().navigate().to("https://google.com");
-    }
-
-    @AfterTest
-    public void postCondition() {
-        DriverWrapper.getDriver().quit();
-    }
-
-    @Test
-    public void testingChromeAndSeleniumBasic() {
-        Assert.assertEquals(true, true);
-    }
 
     @Test
     public void testBasicSearchOnGoogleMainPage() {
