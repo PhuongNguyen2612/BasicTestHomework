@@ -1,5 +1,6 @@
 package com.phuong.homework.selenium4;
 
+import com.phuong.homework.google.pages.GoogleFooter;
 import com.phuong.homework.google.pages.GoogleHomeSearchPage;
 import com.phuong.homework.testListener.TestListener;
 import io.qameta.allure.*;
@@ -37,6 +38,32 @@ public class HomePageSmokeTest extends SeleniumBaseTest {
         String title = new GoogleHomeSearchPage()
                 .clickImagesButton().getUrl();
         Assert.assertTrue(title.contains("img"));
+    }
+
+    @Test(description = "Redirect to About Google Page")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Redirect to About Google Page")
+    public void testAboutButton() {
+        String url = new GoogleFooter().clickAboutButton().getUrl();
+        Assert.assertTrue(url.contains("about.google"));
+    }
+
+    @Test(description = "Redirect to Advertising Page")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Redirect to Advertising Page")
+    public void testAdvertisingButton() {
+        String url = new GoogleFooter().clickAdvertisingButton().getUrl();
+        Assert.assertTrue(url.contains("ads.google"));
+    }
+
+    @Test(description = "Access to doodle page")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Access to doodle page")
+    public void testDoodlesButton() {
+        String title = new GoogleHomeSearchPage()
+                .clickDoodlesButton()
+                .getTitle();
+        Assert.assertTrue(title.contains("Google Doodles"));
     }
 
 }

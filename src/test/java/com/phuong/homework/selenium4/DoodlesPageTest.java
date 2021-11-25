@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 @Listeners({TestListener.class})
 @Epic("Smoke Tests")
 @Feature("Doodle Page Test")
-public class DoodlesPageTest {
+public class DoodlesPageTest extends SeleniumBaseTest{
 
-    @Test(description = "Access to doodle page")
+    @Test(description = "Redirect to doodle page")
     @Severity(SeverityLevel.MINOR)
     @Description("Test Description: Access to doodle page")
     public void testDoodlesButton() {

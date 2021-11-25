@@ -9,17 +9,17 @@ import org.testng.annotations.Test;
 
 public class AboutPageTest extends SeleniumBaseTest {
 
-    @Test(description = "Access to About page")
+    @Test(description = "Redirect to About page")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Access to About page")
+    @Description("Test Description: Redirect to About page")
     public void testAboutButton() {
         String url = new GoogleFooter().clickAboutButton().getUrl();
         Assert.assertTrue(url.contains("about.google"));
     }
 
-    @Test(description = "Access to Introduce using navigation bar")
+    @Test(description = "Redirect to Introduce using navigation bar")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Access to Introduce using navigation bar")
+    @Description("Test Description: Redirect to Introduce using navigation bar")
     public void testNavigateBar_Introduce(){
         String url = new GoogleFooter()
                 .clickAboutButton()
@@ -29,9 +29,9 @@ public class AboutPageTest extends SeleniumBaseTest {
         Assert.assertTrue(url.contains("about.google"));
     }
 
-    @Test(description = "Access to Product using navigation bar")
+    @Test(description = "Redirect to Product using navigation bar")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Access to Product using navigation bar")
+    @Description("Test Description: Redirect to Product using navigation bar")
     public void testNavigateBar_Product(){
         String url = new GoogleFooter()
                 .clickAboutButton()
@@ -41,9 +41,9 @@ public class AboutPageTest extends SeleniumBaseTest {
         Assert.assertTrue(url.contains("products"));
     }
 
-    @Test(description = "Access to Commit using navigation bar")
+    @Test(description = "Redirect to Commit using navigation bar")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Access to Commit using navigation bar")
+    @Description("Test Description: Redirect to Commit using navigation bar")
     public void testNavigateBar_Commit(){
         String url = new GoogleFooter()
                 .clickAboutButton()
@@ -53,9 +53,9 @@ public class AboutPageTest extends SeleniumBaseTest {
         Assert.assertTrue(url.contains("commitments"));
     }
 
-    @Test(description = "Access to Story using navigation bar")
+    @Test(description = "Redirect to Story using navigation bar")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Access to Story using navigation bar")
+    @Description("Test Description: Redirect to Story using navigation bar")
     public void testNavigateBar_Story(){
         String url = new GoogleFooter()
                 .clickAboutButton()

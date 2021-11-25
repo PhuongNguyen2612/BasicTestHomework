@@ -6,12 +6,7 @@
             <class name="com.phuong.homework.selenium4.HomePageSmokeTest" />
         </classes>
     </test>
-    <test name="SearchTest" parallel="false" thread-count="1">
-        <classes>
-            <class name="com.phuong.homework.selenium4.AboutPageTest" />
-        </classes>
-    </test>
-    <test name="SearchTest" parallel="false" thread-count="1">
+    <test name="DoodlesPageTest" parallel="false" thread-count="1">
         <classes>
             <class name="com.phuong.homework.selenium4.DoodlesPageTest" />
         </classes>

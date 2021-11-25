@@ -57,6 +57,8 @@ public class GoogleFooter extends BaseGooglePage {
         return new AdvertisingGooglePage();
     }
 
+
+
     /**
      * Method click on Settings button
      *

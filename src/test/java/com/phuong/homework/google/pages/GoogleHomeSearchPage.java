@@ -2,6 +2,7 @@ package com.phuong.homework.google.pages;
 
 import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.google.BaseGooglePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -32,6 +33,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
      * @param text - string variable presenting what we will input into the search field
      * @return GoogleHomeSearchPage .this
      */
+    @Step("setTextToSearchField")
     public GoogleHomeSearchPage setTextToSearchField(String text){
         googleSearchField.sendKeys(text);
         MyLogger.LOGGER.info("Add '" +text+"' to search field");
@@ -43,6 +45,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
      *
      * @return GoogleSearchResultPage
      */
+    @Step("clickGoogleSearchButton")
     public GoogleSearchResultPage clickGoogleSearchButton(){
         googleSearchButton.submit();
         MyLogger.LOGGER.info("Click search button");
@@ -54,6 +57,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
      *
      * @return DoodlesGooglePage
      */
+    @Step("clickDoodlesButton")
     public DoodlesGooglePage clickDoodlesButton(){
         doodlesButton.click();
         MyLogger.LOGGER.info("Click 'I'm feeling lucky' button");
@@ -64,11 +68,11 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
      * method click on Images button
      *
      * @return GoogleImagesPage*/
+    @Step("clickImagesButton")
     public GoogleImagesPage clickImagesButton(){
         imagesButton.click();
         MyLogger.LOGGER.info("Click 'Images' button");
         return new GoogleImagesPage();
     }
-
 
 }
