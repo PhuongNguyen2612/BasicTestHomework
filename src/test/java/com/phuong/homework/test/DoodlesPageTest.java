@@ -18,6 +18,7 @@ public class DoodlesPageTest extends BaseTest {
 
     @BeforeMethod()
     public void preCondition(){
+        DriverWrapper.setDriver(DriverType.CHROME);
         DriverWrapper.getDriver().navigate().to(baseUrl);
     }
 

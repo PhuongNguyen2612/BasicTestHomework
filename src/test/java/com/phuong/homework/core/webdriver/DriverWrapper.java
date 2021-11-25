@@ -16,9 +16,6 @@ public class DriverWrapper {
     }
 
     public static WebDriver getDriver() {
-        if (driver == null){
-            setDriver(DriverType.CHROME);
-        }
         return driver;
     }
 

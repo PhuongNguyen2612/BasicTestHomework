@@ -49,6 +49,11 @@ public class GoogleHomeSearchPage extends BaseGooglePage {
     public GoogleSearchResultPage clickGoogleSearchButton(){
         googleSearchButton.submit();
         MyLogger.LOGGER.info("Click search button");
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return new GoogleSearchResultPage();
     }
 
