@@ -3,12 +3,17 @@
 <suite name="Regression Tests" >
     <test name="SearchTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.selenium4.HomePageSmokeTest" />
+            <class name="com.phuong.homework.test.HomePageSmokeTest" />
         </classes>
     </test>
     <test name="DoodlesPageTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.selenium4.DoodlesPageTest" />
+            <class name="com.phuong.homework.test.DoodlesPageTest" />
+        </classes>
+    </test>
+    <test name="AboutPageTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.test.AboutPageTest" />
         </classes>
     </test>
 </suite>

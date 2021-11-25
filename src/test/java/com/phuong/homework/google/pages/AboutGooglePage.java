@@ -10,29 +10,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class AboutGooglePage extends BaseGooglePage {
 
-    @FindBy(className = "nav-toggle-button")
-    private WebElement navButton;
-
     @FindBy(xpath = "//li[@id='tab-1']/a")
     private WebElement introduceButton;
 
     @FindBy(xpath = "//li[@id='tab-2']/a")
     private WebElement productButton;
 
-    @FindBy(className = "//li[@id='tab-3']/a")
+    @FindBy(xpath = "//li[@id='tab-3']/a")
     private WebElement commitButton;
 
-    @FindBy(className = "//li[@id='tab-4']/a")
+    @FindBy(xpath = "//li[@id='tab-4']/a")
     private WebElement storyButton;
-
-    /**
-     * Method to click open navigate bar
-     *
-     * @return AboutGooglePage .this*/
-    public AboutGooglePage clickNavigateButton(){
-        navButton.click();
-        return this;
-    }
 
     /**
      * Method to click on Introduce button
@@ -49,6 +37,11 @@ public class AboutGooglePage extends BaseGooglePage {
      * @return AboutGooglePage .this*/
     public AboutGooglePage clickProductButton(){
         productButton.click();
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return this;
     }
 
@@ -58,6 +51,11 @@ public class AboutGooglePage extends BaseGooglePage {
      * @return AboutGooglePage .this*/
     public AboutGooglePage clickCommitButton(){
         commitButton.click();
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return this;
     }
 
@@ -67,6 +65,11 @@ public class AboutGooglePage extends BaseGooglePage {
      * @return AboutGooglePage .this*/
     public AboutGooglePage clickStoryButton(){
         storyButton.click();
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return this;
     }
 

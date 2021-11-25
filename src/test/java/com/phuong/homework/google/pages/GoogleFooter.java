@@ -43,6 +43,11 @@ public class GoogleFooter extends BaseGooglePage {
     public AboutGooglePage clickAboutButton(){
         aboutButton.click();
         MyLogger.LOGGER.info("Click 'About' button");
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return new AboutGooglePage();
     }
 
@@ -54,10 +59,13 @@ public class GoogleFooter extends BaseGooglePage {
     public AdvertisingGooglePage clickAdvertisingButton(){
         advertisingButton.click();
         MyLogger.LOGGER.info("Click 'Advertising' button");
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return new AdvertisingGooglePage();
     }
-
-
 
     /**
      * Method click on Settings button

@@ -3,7 +3,7 @@
 <suite name="Smoke Tests" >
     <test name="SearchTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.selenium4.HomePageSmokeTest" />
+            <class name="com.phuong.homework.test.HomePageSmokeTest" />
         </classes>
     </test>
 </suite>
