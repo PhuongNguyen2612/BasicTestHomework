@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 @Feature("Doodle Page Test")
 public class DoodlesPageTest extends BaseTest {
 
-    @BeforeMethod()
+    @BeforeMethod(description = "Open chrome driver and navigate to google page")
     public void preCondition(){
         DriverWrapper.setDriver(DriverType.CHROME);
         DriverWrapper.getDriver().navigate().to(baseUrl);

@@ -16,27 +16,27 @@ import org.testng.annotations.Test;
 @Feature("Home Page Test")
 public class HomePageSmokeTest extends BaseTest {
 
-    @Test(description = "Search on home page", dataProvider = "drivers")
+    @Test(description = "Open google", dataProvider = "drivers")
     @Severity(SeverityLevel.MINOR)
-    @Description("Test Description: Search on home page")
+    @Description("Test Description: Open google")
     public void testOpenGooglePage(String driver) {
         DriverWrapper.setDriver(DriverType.valueOf(driver));
         DriverWrapper.getDriver().navigate().to(baseUrl);
         Assert.assertEquals(true, true);
     }
 
-//    @Test(description = "Search on home page", dataProvider = "drivers")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Search on home page")
-//    public void testBasicSearchOnGoogleMainPage(String driver) {
-//        DriverWrapper.setDriver(DriverType.valueOf(driver));
-//        DriverWrapper.getDriver().navigate().to(baseUrl);
-//        String title = new GoogleHomeSearchPage()
-//                .setTextToSearchField("viet nam")
-//                .clickGoogleSearchButton()
-//                .getTitle();
-//        Assert.assertTrue(title.contains("viet nam"));
-//    }
+    @Test(description = "Search on home page", dataProvider = "drivers")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Search on home page")
+    public void testBasicSearchOnGoogleMainPage(String driver) {
+        DriverWrapper.setDriver(DriverType.valueOf(driver));
+        DriverWrapper.getDriver().navigate().to(baseUrl);
+        String title = new GoogleHomeSearchPage()
+                .setTextToSearchField("viet nam")
+                .clickGoogleSearchButton()
+                .getTitle();
+        Assert.assertTrue(title.contains("viet nam"));
+    }
 //
 //    @Test(description = "Switch to image search page", dataProvider = "drivers")
 //    @Severity(SeverityLevel.MINOR)
