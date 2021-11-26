@@ -8,6 +8,7 @@ import com.phuong.homework.testListener.TestListener;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -32,16 +33,21 @@ public class DoodlesPageTest extends BaseTest {
         Assert.assertTrue(title.contains("Google Doodles"));
     }
 
-    @Test(description = "Search on doodle page")
+    @DataProvider(name = "searchValues")
+    public Object[][] getSearchValues() {
+        return new Object[][]{{"bee"}, {"celebrating"}, {"halloween"}};
+    }
+
+    @Test(description = "Search on doodle page", dataProvider = "searchValues")
     @Severity(SeverityLevel.MINOR)
     @Description("Test Description: Search on doodle page")
-    public void testSearchOnDoodlesPage() {
+    public void testSearchOnDoodlesPage(String text) {
         String url = new GoogleHomeSearchPage()
                 .clickDoodlesButton()
-                .setTextToSearchField("bee")
+                .setTextToSearchField(text)
                 .clickSearchButton()
                 .getUrl();
-        Assert.assertTrue(url.contains("bee"));
+        Assert.assertTrue(url.contains(text));
     }
 
 }
