@@ -26,6 +26,11 @@ public abstract class BaseTest {
     }
 
     @AfterMethod
+    public void clearCookies(){
+        DriverWrapper.getDriver().manage().deleteAllCookies();
+    }
+
+    @AfterMethod
     public void postCondition() {
         DriverWrapper.getDriver().quit();
     }
