@@ -37,48 +37,48 @@ public class HomePageSmokeTest extends BaseTest {
                 .getTitle();
         Assert.assertTrue(title.contains("viet nam"));
     }
-//
-//    @Test(description = "Switch to image search page", dataProvider = "drivers")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Switch to image search page")
-//    public void testImagesButton(String driver) {
-//        DriverWrapper.setDriver(DriverType.valueOf(driver));
-//        DriverWrapper.getDriver().navigate().to(baseUrl);
-//        String title = new GoogleHomeSearchPage()
-//                .clickImagesButton().getUrl();
-//        Assert.assertTrue(title.contains("img"));
-//    }
-//
-//    @Test(description = "Redirect to About Google Page", dataProvider = "drivers")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Redirect to About Google Page")
-//    public void testAboutButton(String driver) {
-//        DriverWrapper.setDriver(DriverType.valueOf(driver));
-//        DriverWrapper.getDriver().navigate().to(baseUrl);
-//        String url = new GoogleFooter().clickAboutButton().getUrl();
-//        Assert.assertTrue(url.contains("about.google"));
-//    }
-//
-//    @Test(description = "Redirect to Advertising Page", dataProvider = "drivers")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Redirect to Advertising Page")
-//    public void testAdvertisingButton(String driver) {
-//        DriverWrapper.setDriver(DriverType.valueOf(driver));
-//        DriverWrapper.getDriver().navigate().to(baseUrl);
-//        String url = new GoogleFooter().clickAdvertisingButton().getUrl();
-//        Assert.assertTrue(url.contains("ads.google"));
-//    }
-//
-//    @Test(description = "Access to doodle page", dataProvider = "drivers")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Access to doodle page")
-//    public void testDoodlesButton(String driver) {
-//        DriverWrapper.setDriver(DriverType.valueOf(driver));
-//        DriverWrapper.getDriver().navigate().to(baseUrl);
-//        String title = new GoogleHomeSearchPage()
-//                .clickDoodlesButton()
-//                .getTitle();
-//        Assert.assertTrue(title.contains("Google Doodles"));
-//    }
+
+    @Test(description = "Switch to image search page", dataProvider = "drivers")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Switch to image search page")
+    public void testImagesButton(String driver) {
+        DriverWrapper.setDriver(DriverType.valueOf(driver));
+        DriverWrapper.getDriver().navigate().to(baseUrl);
+        String title = new GoogleHomeSearchPage()
+                .clickImagesButton().getUrl();
+        Assert.assertTrue(title.contains("img"));
+    }
+
+    @Test(description = "Redirect to About Google Page", dataProvider = "drivers")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Redirect to About Google Page")
+    public void testAboutButton(String driver) {
+        DriverWrapper.setDriver(DriverType.valueOf(driver));
+        DriverWrapper.getDriver().navigate().to(baseUrl);
+        String url = new GoogleFooter().clickAboutButton().getUrl();
+        Assert.assertTrue(url.contains("about.google"));
+    }
+
+    @Test(description = "Redirect to Advertising Page", dataProvider = "drivers")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Redirect to Advertising Page")
+    public void testAdvertisingButton(String driver) {
+        DriverWrapper.setDriver(DriverType.valueOf(driver));
+        DriverWrapper.getDriver().navigate().to(baseUrl);
+        String url = new GoogleFooter().clickAdvertisingButton().getUrl();
+        Assert.assertTrue(url.contains("ads.google"));
+    }
+
+    @Test(description = "Access to doodle page", dataProvider = "drivers")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Access to doodle page")
+    public void testDoodlesButton(String driver) {
+        DriverWrapper.setDriver(DriverType.valueOf(driver));
+        DriverWrapper.getDriver().navigate().to(baseUrl);
+        String title = new GoogleHomeSearchPage()
+                .clickDoodlesButton()
+                .getTitle();
+        Assert.assertTrue(title.contains("Google Doodles"));
+    }
 
 }
