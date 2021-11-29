@@ -27,7 +27,8 @@ public class DriverWrapper {
             case FIREFOX:
                 driver = FireFoxDriverManager.getFirefoxManagerInstance().createDriver();
                 break;
-
+            case EDGE:
+                driver = EdgeDriverManager.getEdgeManagerInstance().createDriver();
         }
     }
 
