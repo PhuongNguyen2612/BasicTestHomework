@@ -3,7 +3,13 @@ package com.phuong.homework.test;
 import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.core.webdriver.model.DriverType;
+import com.phuong.homework.google.pages.GoogleFooter;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class AboutPageTest extends BaseTest {
 
@@ -13,15 +19,15 @@ public class AboutPageTest extends BaseTest {
         DriverWrapper.getDriver().navigate().to(baseUrl);
     }
 
-//    @Test(description = "Redirect to About page")
-//    @Severity(SeverityLevel.MINOR)
-//    @Description("Test Description: Redirect to About page")
-//    public void testAboutButton() {
-//        String url = new GoogleFooter().clickAboutButton().getUrl();
-//        Assert.assertTrue(url.contains("about.google"));
-//    }
-//
-//
+    @Test(description = "Redirect to About page")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Redirect to About page")
+    public void testAboutButton() {
+        String url = new GoogleFooter().clickAboutButton().getUrl();
+        Assert.assertTrue(url.contains("about.google"));
+    }
+
+
 //    @Test(description = "Redirect to Product using navigation bar")
 //    @Severity(SeverityLevel.MINOR)
 //    @Description("Test Description: Redirect to Product using navigation bar")
