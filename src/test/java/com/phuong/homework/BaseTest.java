@@ -9,8 +9,8 @@ public abstract class BaseTest {
 
     protected String baseUrl = "https://www.google.com/";
 
-//    private String environment = System.getProperty("environment");
-    private String environment = System.getenv("environment");
+    private String environment = System.getProperty("environment");
+//    private String environment = System.getenv("environment");
 
     @DataProvider(name = "drivers")
     public Object[][] getDrivers(){
