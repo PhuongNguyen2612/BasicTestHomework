@@ -26,11 +26,6 @@ public abstract class BaseTest {
         }
     }
 
-    @AfterMethod(description = "Clear cookies")
-    public void clearCookies(){
-        DriverWrapper.getDriver().manage().deleteAllCookies();
-    }
-
     @AfterMethod(description = "Close driver")
     public void postCondition() {
         DriverWrapper.getDriver().quit();
