@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Tests" >
+    <test name="HomePageTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.test.HomePageTest" />
+        </classes>
+    </test>
+    <test name="DoodlesPageTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.test.DoodlesPageTest" />
+        </classes>
+    </test>
+    <test name="AboutPageTest" parallel="false" thread-count="1">
+        <classes>
+            <class name="com.phuong.homework.test.AboutPageTest" />
+        </classes>
+    </test>
+</suite>
