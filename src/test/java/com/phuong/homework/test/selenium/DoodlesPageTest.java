@@ -1,6 +1,5 @@
-package com.phuong.homework.test;
+package com.phuong.homework.test.selenium;
 
-import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.core.webdriver.model.DriverType;
 import com.phuong.homework.google.pages.GoogleHomeSearchPage;
@@ -15,7 +14,7 @@ import org.testng.annotations.Test;
 @Listeners({TestListener.class})
 @Epic("Smoke Tests")
 @Feature("Doodle Page Test")
-public class DoodlesPageTest extends BaseTest {
+public class DoodlesPageTest extends SeleniumBaseTest {
 
     @BeforeMethod(description = "Open chrome driver and navigate to google page")
     public void preCondition(){

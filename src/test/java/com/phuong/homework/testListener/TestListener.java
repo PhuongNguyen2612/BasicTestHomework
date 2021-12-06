@@ -1,6 +1,6 @@
 package com.phuong.homework.testListener;
 
-import com.phuong.homework.BaseTest;
+import com.phuong.homework.test.selenium.SeleniumBaseTest;
 import com.phuong.homework.core.logger.MyLogger;
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import io.qameta.allure.Attachment;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestListener extends BaseTest implements ITestListener {
+public class TestListener extends SeleniumBaseTest implements ITestListener {
     private static String getTestMethodName(ITestResult iTestResult) {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }

@@ -1,16 +1,15 @@
-package com.phuong.homework;
+package com.phuong.homework.test.selenium;
 
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.core.webdriver.model.DriverType;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 
-public abstract class BaseTest {
+public abstract class SeleniumBaseTest {
 
     protected String baseUrl = "https://www.google.com/";
 
     private String environment = System.getProperty("environment");
-//    private String environment = System.getenv("environment");
 
     @DataProvider(name = "drivers")
     public Object[][] getDrivers(){
