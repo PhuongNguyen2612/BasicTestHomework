@@ -3,17 +3,17 @@
 <suite name="Regression Tests" >
     <test name="HomePageTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.test.HomePageTest" />
+            <class name="com.phuong.homework.test.selenium.HomePageTest" />
         </classes>
     </test>
     <test name="DoodlesPageTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.test.DoodlesPageTest" />
+            <class name="com.phuong.homework.test.selenium.DoodlesPageTest" />
         </classes>
     </test>
     <test name="AboutPageTest" parallel="false" thread-count="1">
         <classes>
-            <class name="com.phuong.homework.test.AboutPageTest" />
+            <class name="com.phuong.homework.test.selenium.AboutPageTest" />
         </classes>
     </test>
 </suite>

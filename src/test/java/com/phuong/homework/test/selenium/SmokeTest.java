@@ -1,6 +1,5 @@
-package com.phuong.homework.test;
+package com.phuong.homework.test.selenium;
 
-import com.phuong.homework.BaseTest;
 import com.phuong.homework.core.webdriver.DriverWrapper;
 import com.phuong.homework.core.webdriver.model.DriverType;
 import com.phuong.homework.testListener.TestListener;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 
 @Listeners({TestListener.class})
 @Epic("Smoke Tests")
-public class SmokeTest extends BaseTest {
+public class SmokeTest extends SeleniumBaseTest {
 
     @Test(description = "Open google", dataProvider = "drivers")
     @Severity(SeverityLevel.MINOR)
