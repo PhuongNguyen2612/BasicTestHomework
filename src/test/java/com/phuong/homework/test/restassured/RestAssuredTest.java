@@ -1,6 +1,5 @@
-package com.phuong.homework.restAssured44;
+package com.phuong.homework.test.restassured;
 
-import com.phuong.homework.test.restassured.RestAssuredBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
