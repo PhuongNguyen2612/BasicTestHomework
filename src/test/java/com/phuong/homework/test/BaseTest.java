@@ -1,4 +1,4 @@
 package com.phuong.homework.test;
 
-public class BaseTest {
+public abstract class BaseTest {
 }
