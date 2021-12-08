@@ -10,7 +10,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testLocationByName() {
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -23,7 +22,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testLocationByName1(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -36,7 +34,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testLocationByName2(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -49,7 +46,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testLocationByName3(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -61,7 +57,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void TestLocationByIP(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -73,7 +68,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void TestLocationByZip(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -85,7 +79,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void TestLocationByPostCode(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -97,7 +90,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void TestLocationByMetar(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -109,7 +101,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testLocationNameNotMatching() {
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709")
@@ -122,7 +113,6 @@ public class RestAssuredTest extends RestAssuredBaseTest {
 
     @Test
     public void testMissingLocationParam(){
-        String baseUrl = "http://api.weatherapi.com/v1";
         RequestSpecBuilder spec = new RequestSpecBuilder();
         spec.setBaseUri(baseUrl)
                 .addParam("key", "29bebb4c6e3844ffafe115519210709");
